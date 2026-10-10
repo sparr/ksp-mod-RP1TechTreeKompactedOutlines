@@ -1,0 +1,24 @@
+name: create-release
+
+# Run by hand from the Actions tab. It commits the version bump, tags it,
+# pushes both, and creates a draft GitHub release with the zip attached.
+on:
+  workflow_dispatch:
+    inputs:
+      version-string:
+        description: Version as major.minor.patch, or one of --major, --minor, --patch
+        type: string
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  create-release:
+    uses: KSPModdingLibs/KSPBuildTools/.github/workflows/create-release.yml@1.1.1
+    with:
+      version-string: ${{ inputs.version-string }}
+      solution-file-path: RP1TechTreeKompactedOutlines.sln
+      changelog-output-file: GameData/RP1TechTreeKompactedOutlines/changelog.cfg
+      # Set to true once the csproj has ModReference items with a CKANIdentifier.
+      use-ckan: false

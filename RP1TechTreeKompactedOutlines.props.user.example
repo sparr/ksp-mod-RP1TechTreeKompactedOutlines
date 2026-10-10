@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <!--
+      Copy this file to RP1TechTreeKompactedOutlines.props.user and set the directory that holds
+      KSP.x86_64 (Linux), KSP_x64.exe (Windows), or KSP.app (macOS).
+      Setting the KSP_ROOT environment variable works too.
+      The build only reads reference assemblies from here. It never writes to it.
+    -->
+    <KSPBT_GameRoot>/path/to/Kerbal Space Program</KSPBT_GameRoot>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,14 @@
+{
+  "NAME": "RP1TechTreeKompactedOutlines",
+  "URL": "https://raw.githubusercontent.com/sparr/ksp-mod-RP1TechTreeKompactedOutlines/main/GameData/RP1TechTreeKompactedOutlines/RP1TechTreeKompactedOutlines.version",
+  "DOWNLOAD": "https://github.com/sparr/ksp-mod-RP1TechTreeKompactedOutlines/releases",
+  "GITHUB": {
+    "USERNAME": "sparr",
+    "REPOSITORY": "ksp-mod-RP1TechTreeKompactedOutlines",
+    "ALLOW_PRE_RELEASE": false
+  },
+  "VERSION": "@VERSION_FULL@",
+  "KSP_VERSION": "1.12.5",
+  "KSP_VERSION_MIN": "1.12.0",
+  "KSP_VERSION_MAX": "1.12.99"
+}

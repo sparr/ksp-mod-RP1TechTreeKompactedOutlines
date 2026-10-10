@@ -1,0 +1,25 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.cs'
+      - '**/*.csproj'
+      - '**/*.props'
+      - '.github/workflows/build.yml'
+  pull_request:
+    paths:
+      - '**/*.cs'
+      - '**/*.csproj'
+      - '**/*.props'
+      - '.github/workflows/build.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: KSPModdingLibs/KSPBuildTools/.github/workflows/build.yml@1.1.1
+    with:
+      solution-file-path: RP1TechTreeKompactedOutlines.sln
+      # Set to true once the csproj has ModReference items with a CKANIdentifier.
+      use-ckan: false

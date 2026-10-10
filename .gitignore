@@ -1,0 +1,10 @@
+# Build output
+bin/
+obj/
+/GameData/*/Plugins/
+/GameData/*/LICENSE
+/GameData/*/README.md
+
+# Per-machine settings, including RP1TechTreeKompactedOutlines.props.user
+*.user
+.vs/
