@@ -69,8 +69,11 @@ A KSP 1.12 plugin mod: .NET Framework 4.8, built with the `dotnet` SDK and the
   holds the path to the local KSP install.
 - `netkan/RP1TechTreeKompactedOutlines.netkan` is the CKAN metadata to submit to `KSP-CKAN/NetKAN`.
   Once it is merged there, the copy upstream is the one that counts.
-- `.github/workflows/` calls the `KSPBuildTools` reusable workflows, pinned to
-  the same version as the NuGet package in the csproj. Bump both together.
+- `.github/workflows/` uses `KSPBuildTools`, pinned to the same version as the
+  NuGet package in the csproj. Bump both together. `build.yml` and
+  `validate.yml` call its reusable workflows. `create-release.yml` calls its
+  actions directly, because the reusable release workflow names the zip after
+  the repository and the zip is named after the mod.
 
 ## Building
 
